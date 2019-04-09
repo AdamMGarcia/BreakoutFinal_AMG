@@ -37,6 +37,10 @@ let BlockCategory  : UInt32 = 0x1 << 2
 let PaddleCategory : UInt32 = 0x1 << 3
 let BorderCategory : UInt32 = 0x1 << 4
 
+
+
+
+
 class GameScene: SKScene, SKPhysicsContactDelegate {
   
   var isFingerOnPaddle = false
@@ -66,6 +70,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
   let gameOverSound = SKAction.playSoundFileNamed("game-over", waitForCompletion: false)
 
   
+    
   // MARK: - Setup
   override func didMove(to view: SKView) {
     super.didMove(to: view)
@@ -137,6 +142,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     gameState.enter(WaitingForTap.self)
   }
   
+    
+    
+    
   // MARK: Events
   override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
     switch gameState.currentState {
@@ -165,6 +173,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
   }
   
+    
+    
+    
   override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
     // 1.
     if isFingerOnPaddle {
@@ -184,14 +195,23 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
   }
   
+    
+    
+    
   override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
     isFingerOnPaddle = false
   }
   
+    
+    
+    
   override func update(_ currentTime: TimeInterval) {
     gameState.update(deltaTime: currentTime)
   }
   
+    
+    
+    
   // MARK: - SKPhysicsContactDelegate
   func didBegin(_ contact: SKPhysicsContact) {
     if gameState.currentState is Playing {
@@ -234,6 +254,9 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
   }
   
+    
+    
+    
   // MARK: - Helpers
   func breakBlock(_ node: SKNode) {
     run(bambooBreakSound)
