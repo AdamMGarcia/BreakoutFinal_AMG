@@ -102,12 +102,13 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     ball.physicsBody!.contactTestBitMask = BottomCategory | BlockCategory | BorderCategory | PaddleCategory
     
     // 1.
-    let numberOfBlocks = 8
+    let numberOfBlocks = 12
     let blockWidth = SKSpriteNode(imageNamed: "block").size.width
     let totalBlocksWidth = blockWidth * CGFloat(numberOfBlocks)
     // 2.
     let xOffset = (frame.width - totalBlocksWidth) / 2
     // 3.
+    // bottom row
     for i in 0..<numberOfBlocks {
       let block = SKSpriteNode(imageNamed: "block.png")
       block.position = CGPoint(x: xOffset + CGFloat(CGFloat(i) + 0.5) * blockWidth,
@@ -122,6 +123,22 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       block.physicsBody!.categoryBitMask = BlockCategory
       block.zPosition = 2
       addChild(block)
+    }
+    // top row
+    for i in 0..<numberOfBlocks {
+        let block = SKSpriteNode(imageNamed: "block.png")
+        block.position = CGPoint(x: xOffset + CGFloat(CGFloat(i) + 0.5) * blockWidth,
+                                 y: frame.height * 0.9)
+        
+        block.physicsBody = SKPhysicsBody(rectangleOf: block.frame.size)
+        block.physicsBody!.allowsRotation = false
+        block.physicsBody!.friction = 0.0
+        block.physicsBody!.affectedByGravity = false
+        block.physicsBody!.isDynamic = false
+        block.name = BlockCategoryName
+        block.physicsBody!.categoryBitMask = BlockCategory
+        block.zPosition = 2
+        addChild(block)
     }
     
     let gameMessage = SKSpriteNode(imageNamed: "TapToPlay")
