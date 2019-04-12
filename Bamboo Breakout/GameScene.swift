@@ -37,6 +37,8 @@ let BlockCategory  : UInt32 = 0x1 << 2
 let PaddleCategory : UInt32 = 0x1 << 3
 let BorderCategory : UInt32 = 0x1 << 4
 
+var level = 1;
+
 
 
 
@@ -63,10 +65,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
   }
   
-  let blipSound = SKAction.playSoundFileNamed("pongblip", waitForCompletion: false)
+  // sounds
+  let blipSound = SKAction.playSoundFileNamed("mario-jump-sound", waitForCompletion: false)
   let blipPaddleSound = SKAction.playSoundFileNamed("paddleBlip", waitForCompletion: false)
   let bambooBreakSound = SKAction.playSoundFileNamed("BambooBreak", waitForCompletion: false)
-  let gameWonSound = SKAction.playSoundFileNamed("game-won", waitForCompletion: false)
+  let gameWonSound = SKAction.playSoundFileNamed("mario-game-won", waitForCompletion: false)
   let gameOverSound = SKAction.playSoundFileNamed("game-over", waitForCompletion: false)
 
   

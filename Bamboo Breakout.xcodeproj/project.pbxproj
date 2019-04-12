@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6610E31D225F901B00F6597A /* mario-game-won.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6610E31C225F901B00F6597A /* mario-game-won.mp3 */; };
+		6610E31F225F92CE00F6597A /* mario-jump-sound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6610E31E225F92CE00F6597A /* mario-jump-sound.mp3 */; };
 		F572800F1CC04F1D00D87266 /* BallTrail.sks in Resources */ = {isa = PBXBuildFile; fileRef = F572800D1CC04F1D00D87266 /* BallTrail.sks */; };
 		F57280101CC04F1D00D87266 /* BrokenPlatform.sks in Resources */ = {isa = PBXBuildFile; fileRef = F572800E1CC04F1D00D87266 /* BrokenPlatform.sks */; };
 		F577B38F1CB81F840005E827 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F577B38E1CB81F840005E827 /* AppDelegate.swift */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6610E31C225F901B00F6597A /* mario-game-won.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "mario-game-won.mp3"; sourceTree = "<group>"; };
+		6610E31E225F92CE00F6597A /* mario-jump-sound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "mario-jump-sound.mp3"; sourceTree = "<group>"; };
 		F572800D1CC04F1D00D87266 /* BallTrail.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BallTrail.sks; sourceTree = "<group>"; };
 		F572800E1CC04F1D00D87266 /* BrokenPlatform.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = BrokenPlatform.sks; sourceTree = "<group>"; };
 		F577B38B1CB81F840005E827 /* Bamboo Breakout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bamboo Breakout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +122,8 @@
 				F5E52DDE1CC19C9300FB5F61 /* BambooBreak.wav */,
 				F577B3B21CB8210A0005E827 /* game-over.wav */,
 				F577B3B31CB8210A0005E827 /* game-won.mp3 */,
+				6610E31E225F92CE00F6597A /* mario-jump-sound.mp3 */,
+				6610E31C225F901B00F6597A /* mario-game-won.mp3 */,
 				F577B3B41CB8210A0005E827 /* paddleBlip.wav */,
 				F577B3B51CB8210A0005E827 /* pongblip.wav */,
 			);
@@ -184,6 +190,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6610E31F225F92CE00F6597A /* mario-jump-sound.mp3 in Resources */,
 				F577B3911CB81F840005E827 /* GameScene.sks in Resources */,
 				F572800F1CC04F1D00D87266 /* BallTrail.sks in Resources */,
 				F577B3BA1CB8210A0005E827 /* pongblip.wav in Resources */,
@@ -192,6 +199,7 @@
 				F577B39D1CB81F840005E827 /* LaunchScreen.storyboard in Resources */,
 				F577B3B71CB8210A0005E827 /* game-over.wav in Resources */,
 				F577B39A1CB81F840005E827 /* Assets.xcassets in Resources */,
+				6610E31D225F901B00F6597A /* mario-game-won.mp3 in Resources */,
 				F57280101CC04F1D00D87266 /* BrokenPlatform.sks in Resources */,
 				F577B3B91CB8210A0005E827 /* paddleBlip.wav in Resources */,
 				F577B3981CB81F840005E827 /* Main.storyboard in Resources */,
