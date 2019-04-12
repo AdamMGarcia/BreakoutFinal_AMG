@@ -37,7 +37,7 @@ let BlockCategory  : UInt32 = 0x1 << 2
 let PaddleCategory : UInt32 = 0x1 << 3
 let BorderCategory : UInt32 = 0x1 << 4
 
-var level = 1;
+var levelNum = 1;
 
 
 
@@ -59,11 +59,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
       let texture = SKTexture(imageNamed: textureName)
       let actionSequence = SKAction.sequence([SKAction.setTexture(texture),
         SKAction.scale(to: 1.0, duration: 0.25)])
-      
+      if gameWon == true {
+        levelNum += 1
+        print (level)
+      }
+        
       gameOver.run(actionSequence)
       run(gameWon ? gameWonSound : gameOverSound)
     }
   }
+    
+    func level() {
+        
+    }
   
   // sounds
   let blipSound = SKAction.playSoundFileNamed("mario-jump-sound", waitForCompletion: false)
